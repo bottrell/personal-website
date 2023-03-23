@@ -1,10 +1,19 @@
+import React from "react";
 
 export default function Test() {
 
-    return (
+    async function getServerSideProps({ data }) {
 
+        const allDataBaseData: String = "";
+        return {
+            props: {
+                data: { id: 1, name: "mango" }
+            }
+        }
+    }
+    return (
         <h1 className="text-3xl font-bold">
-            Hello, World!
+            data
         </h1>
     );
 }
